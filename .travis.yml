@@ -9,8 +9,7 @@ script:
 deploy:
   provider: releases
   file:
-    - _build/your_file_1.pdf
-    - _build/your_file_2.pdf
+    - _build/main.pdf
   skip_cleanup: true
   on:
     tags: true
