@@ -54,8 +54,8 @@ classificação que serão avaliados, foi utilizado KDD como descrito por
 
 \imagem{.70}{reduced_kdd}{\label{reducedKdd}Fluxo básico do processo KDD.}{\citeonline{tan2009introduccao}}
 
-As subseções \ref{dataEntrySection}, \ref{}, \ref{}, \ref{} e \ref{} descrevem
-como o processo KDD foi aplicado nesse trabalho.
+As subseções seguintes descrevem como o processo KDD foi aplicado nesse
+trabalho.
 
 \subsection{Entrada de Dados}
 \label{dataEntrySection}
@@ -66,21 +66,53 @@ poderiam representar cada um dos três construtos da TDT. Os dados das quais
 foram retiradas as variáveis estão armazenados nas bases de dados do Sistema de
 Gestão de Aprendizado Moodle\footnote{\url{https://moodle.org/} Acesso em: 06 de
 mar. 2019}, atualmente, em uso pelos cursos de graduação oferecidos na
-modalidade EAD pela UNIVASF.
+modalidade EAD pela UNIVASF. Os dados foram cedidos pela Secretaria de
+Tecnologia da Informação (STI) da UNIVASF.
 
 O Moodle é uma plataforma de ensino projetada para oferecer a educadores,
 administradores e estudantes, com uma sistema integrado, simple e robusto, a
 criação de ambientes de aprendizado personalizados. É financiado por uma rede de
 mais de 80 empresas ao redor do mundo.
 
+O banco de dados Moodle é grande e complexo, retendo informações sobre os
+diversos componentes de uma sala de aula virtual como \textit{chats},
+questionários \textit{online} e fóruns de discussão.
+
+A depender da versão do Moodle, a quantidade de tabelas na base de dados pode
+variar significativamente. A versão utilizada nesse trabalho possuía cerca de
+430 tabelas. O Quadro \ref{moodleTableReferences} apresenta as tabelas
+essenciais para a coleta dos dados utilizados nesse trabalho.
+
+\begin{quadro}[!htb]
+  \centering
+  \caption{Descrição das principais tabelas do BD Moodle, onde foram coletados dados desse trabalho.}
+  \label{moodleTableReferences}
+  \begin{tabular}{|l|l|}
+    \hline
+    \multicolumn{1}{|c|}{\textbf{Tabela}} & \multicolumn{1}{c|}{\textbf{Descrição}} \\ \hline
+    \textit{mdl\_assign} & \begin{tabular}[c]{@{}l@{}}Guarda informações sobre as atividades avaliativas\\ relacionadas com a produção de material pelos alunos em\\ cada disciplina.\end{tabular} \\ \hline
+    \textit{mdl\_context} & \begin{tabular}[c]{@{}l@{}}Registra os níveis (contextos) de acesso de cada usuário, de\\ acordo com o seu perfil.\end{tabular} \\ \hline
+    \textit{mdl\_course} & \begin{tabular}[c]{@{}l@{}}Tabela principal dos cursos, onde as disciplinas de cada curso\\ são registradas e configuradas.\end{tabular} \\ \hline
+    \textit{mdl\_course\_categories} & \begin{tabular}[c]{@{}l@{}}Tabela auxiliar da \textit{mdl\_course}, onde são criadas as categorias\\ que podem representar cursos distintos (Biologia, Pedagogia\\ entre outros)\end{tabular} \\ \hline
+    \textit{mdl\_forum} & \begin{tabular}[c]{@{}l@{}}Possui informações gerais de cada fórum criado nas\\ disciplinas.\end{tabular} \\ \hline
+    \textit{mdl\_forum\_discussions} & Registra os tópicos criados em cada um dos fóruns. \\ \hline
+    \textit{mdl\_forum\_posts} & \begin{tabular}[c]{@{}l@{}}Guarda as postagens dos alunos que são associadas aos\\ respectivos fóruns/tópicos.\end{tabular} \\ \hline
+    \textit{mdl\_log} & \begin{tabular}[c]{@{}l@{}}Registra todas as ações dos usuários no ambiente. É a tabela\\ com maior número de registros.\end{tabular} \\ \hline
+    \textit{mdl\_message\_read} & \begin{tabular}[c]{@{}l@{}}Armazena as mensagens que foram lidas pelos destinatários,\\ assim como o emissor e o receptor.\end{tabular} \\ \hline
+    \textit{mdl\_role\_assignments} & \begin{tabular}[c]{@{}l@{}}Registros da atribuição de funções do usuário em contextos\\ diferentes.\end{tabular} \\ \hline
+    \textit{mdl\_user} & Cadastro geral de usuários. \\ \hline
+  \end{tabular}
+  \Ididthis
+\end{quadro}
+
 Foram selecionados dois cursos dos quais foram extraídos os dados. O curso de
 Bacharelado em Administração Pública com início no período letivo 2013.2 e
 termino no período letivo 2017.1, contando com 285 estudantes e 41 disciplinas.
 E o curso de Licenciatura em Pedagogia que ocorreu entre os períodos letivos de
-2014.2 e 2018.1, com 160 estudantes e 39 disciplinas. O Quadro
+2014.2 e 2018.1, com 160 estudantes e 39 disciplinas. A Tabela
 \ref{courseInfoTable} apresenta um resumo dessas informações.
 
-\begin{quadro}[!htb]
+\begin{table}[!htb]
   \centering
   \caption{Resumo das informações dos cursos selecionados}
   \label{courseInfoTable}
@@ -90,7 +122,8 @@ E o curso de Licenciatura em Pedagogia que ocorreu entre os períodos letivos de
     \begin{tabular}[c]{@{}l@{}}Bacharelado em \\ Administração Pública\end{tabular} & 285 & 41 & 2013.2 & 2017.1 \\ \midrule
     Licenciatura em Pedagogia & 160 & 39 & 2014.2 & 2018.1 \\ \bottomrule
   \end{tabular}
-\end{quadro}
+  \Ididthis
+\end{table}
 
 Na etapa de pré-processamento de dados ocorrem as transformações e adaptações
 dos dados para os algoritmos de Mineração de Dados. Entre essas transformações
