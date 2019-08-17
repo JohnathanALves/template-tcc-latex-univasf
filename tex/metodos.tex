@@ -135,6 +135,8 @@ E o curso de Licenciatura em Pedagogia que ocorreu entre os períodos letivos de
   \Ididthis
 \end{table}
 
+\subsection{Pré-processamento}
+
 Devido ao grande volume de dados foram elaborados \textit{scripts} em SQL que
 geram tabelas auxiliares apenas com dados dos das disciplinas contidas e alunos
 matrículados nos cursos selecionados para esse trabalho. O Quadro
@@ -168,28 +170,28 @@ variáveis e relaciona as mesmas com os construtos da TDT.
 
 \begin{quadro}[!htb]
   \centering
-  \caption{Lista das variáveis e respectivos construtos}
+  \caption{Lista das variáveis e respectivos construtos e seus identificadores}
   \label{variablesDescritionTable}
-  \begin{tabular}{|l|l|}
+  \begin{tabular}{|l|l|l|}
     \hline
-    \multicolumn{1}{|c|}{\textbf{Variáveis}} & \textbf{Construto} \\ \hline
-    Quantidade geral de postagens do aluno em fóruns, por disciplina. & DIÁLOGO \\ \hline
-    \begin{tabular}[c]{@{}l@{}}Quantidade geral de mensagens enviadas pelo aluno\\ dentro do ambiente, por semestre.\end{tabular} & DIÁLOGO \\ \hline
-    \begin{tabular}[c]{@{}l@{}}Quantidade geral de mensagens recebidas pelo aluno\\ dentro do ambiente, por semestre.\end{tabular} & DIÁLOGO \\ \hline
-    \begin{tabular}[c]{@{}l@{}}Quantidade geral de recursos disponibilizados pelo professor\\ (página \textit{web}, vídeo, pdfs, entre outros) por disciplina.\end{tabular} & ESTRUTURA \\ \hline
-    \begin{tabular}[c]{@{}l@{}}Quantidade de acessos do aluno ao ambiente por\\ turno (Manhã), por semestre.\end{tabular} & AUTONOMIA \\ \hline
-    \begin{tabular}[c]{@{}l@{}}Quantidade de acessos do aluno ao ambiente por\\ turno (Tarde), por semestre.\end{tabular} & AUTONOMIA \\ \hline
-    \begin{tabular}[c]{@{}l@{}}Quantidade de acessos do aluno ao ambiente por\\ turno (Noite), por semestre.\end{tabular} & AUTONOMIA \\ \hline
-    \begin{tabular}[c]{@{}l@{}}Quantidade de colegas diferentes para quem o aluno enviou\\ mensagens no ambiente, por semestre.\end{tabular} & DIÁLOGO \\ \hline
-    Quantidade de acessos do aluno ao ambiente no semestre. & AUTONOMIA \\ \hline
-    \begin{tabular}[c]{@{}l@{}}Quantidade de mensagens enviadas pelo aluno aos \\ professores pelo ambiente, por semestre.\end{tabular} & DIÁLOGO \\ \hline
-    \begin{tabular}[c]{@{}l@{}}Quantidade de mensagens dos professores recebidas\\ pelo aluno no ambiente, por semestre.\end{tabular} & DIÁLOGO \\ \hline
-    \begin{tabular}[c]{@{}l@{}}Quantidade de mensagens de colegas recebidas pelo\\ aluno no ambiente, por semestre.\end{tabular} & DIÁLOGO \\ \hline
-    \begin{tabular}[c]{@{}l@{}}Quantidade de mensagens enviadas pelo aluno para\\ outros colegas no ambiente, por semestre.\end{tabular} & DIÁLOGO \\ \hline
-    \begin{tabular}[c]{@{}l@{}}Quantidade de atividades com prazos de resposta ou\\ envio definidos por professor, por disciplina.\end{tabular} & ESTRUTURA \\ \hline
-    \begin{tabular}[c]{@{}l@{}}Quantidade de acessos do aluno aos diferentes tipos \\ de atividades disponibilizadas (\textit{webquest}, fórum, quiz,\\ entre outros), por disciplina.\end{tabular} & AUTONOMIA \\ \hline
-    \begin{tabular}[c]{@{}l@{}}Quantidade de fóruns de discussão disponibilizados\\ sobre os conteúdos por disciplina.\end{tabular} & ESTRUTURA \\ \hline
-    Quantidade de acessos do aluno aos fóruns, por disciplina. & AUTONOMIA \\ \hline
+    \multicolumn{1}{|c|}{\textbf{Identificador}} & \multicolumn{1}{c|}{\textbf{Variáveis}} & \multicolumn{1}{c|}{\textbf{Construto}} \\ \hline
+    VAR01 & \begin{tabular}[c]{@{}l@{}}Quantidade geral de postagens do aluno em fóruns,\\ por disciplina.\end{tabular} & Diálogo \\ \hline
+    VAR02 & \begin{tabular}[c]{@{}l@{}}Quantidade geral de mensagens enviadas pelo\\ aluno dentro do ambiente, por semestre.\end{tabular} & Diálogo \\ \hline
+    VAR03 & \begin{tabular}[c]{@{}l@{}}Quantidade geral de mensagens recebidas pelo\\ aluno dentro do ambiente, por semestre.\end{tabular} & Diálogo \\ \hline
+    VAR04 & \begin{tabular}[c]{@{}l@{}}Quantidade geral de recursos disponibilizados pelo\\ professor (página web, vídeo, pdfs, entre outros)\\ por disciplina.\end{tabular} & Estrutura \\ \hline
+    VAR05a & \begin{tabular}[c]{@{}l@{}}Quantidade de acessos do aluno ao ambiente por\\ turno (Manhã), por semestre.\end{tabular} & Autonomia \\ \hline
+    VAR05b & \begin{tabular}[c]{@{}l@{}}Quantidade de acessos do aluno ao ambiente por\\ turno (Tarde), por semestre.\end{tabular} & Autonomia \\ \hline
+    VAR05c & \begin{tabular}[c]{@{}l@{}}Quantidade de acessos do aluno ao ambiente por\\ turno (Noite), por semestre.\end{tabular} & Autonomia \\ \hline
+    VAR06 & \begin{tabular}[c]{@{}l@{}}Quantidade de colegas diferentes para quem o\\ aluno enviou mensagens no ambiente, por\\ semestre.\end{tabular} & Diálogo \\ \hline
+    VAR07 & \begin{tabular}[c]{@{}l@{}}Quantidade de acessos do aluno ao ambiente no\\ semestre.\end{tabular} & Autonomia \\ \hline
+    VAR08 & \begin{tabular}[c]{@{}l@{}}Quantidade de mensagens enviadas pelo aluno\\ aos professores pelo ambiente, por semestre.\end{tabular} & Diálogo \\ \hline
+    VAR09 & \begin{tabular}[c]{@{}l@{}}Quantidade de mensagens dos professores recebidas\\ pelo aluno no ambiente, por semestre.\end{tabular} & Diálogo \\ \hline
+    VAR10 & \begin{tabular}[c]{@{}l@{}}Quantidade de mensagens de colegas recebidas pelo\\ aluno no ambiente, por semestre.\end{tabular} & Diálogo \\ \hline
+    VAR11 & \begin{tabular}[c]{@{}l@{}}Quantidade de mensagens enviadas pelo aluno para\\ outros colegas no ambiente, por semestre.\end{tabular} & Diálogo \\ \hline
+    VAR12 & \begin{tabular}[c]{@{}l@{}}Quantidade de atividades com prazos de resposta ou\\ envio definidos por professor, por disciplina.\end{tabular} & Estrutura \\ \hline
+    VAR13 & \begin{tabular}[c]{@{}l@{}}Quantidade de acessos do aluno aos diferentes tipos\\ de atividades disponibilizadas (webquest, fórum,\\ quiz, entre outros), por disciplina.\end{tabular} & Autonomia \\ \hline
+    VAR14 & \begin{tabular}[c]{@{}l@{}}Quantidade de fóruns de discussão disponibilizados\\ sobre os conteúdos por disciplina.\end{tabular} & Estrutura \\ \hline
+    VAR15 & \begin{tabular}[c]{@{}l@{}}Quantidade de acessos do aluno aos fóruns, por\\ disciplina.\end{tabular} & Autonomia \\ \hline
   \end{tabular}
   \Otherguydidthis{ramos2016abordagem}
 \end{quadro}
@@ -200,7 +202,7 @@ tabelas com os dados brutos onde cada linha gerada representa um aluno em uma
 disciplina e as variáveis mapeadas para os construtos da TDT. As tabelas geradas
 serviram como base para as etapas seguintes do processo KDD.
 
-\subsection{Pré-processamento}
+
 
 Na etapa de pré-processamento de dados ocorrem as transformações e adaptações
 dos dados para os algoritmos de Mineração de Dados. Entre essas transformações
@@ -212,6 +214,8 @@ posteriores.
 No contexto deste trabalho, utilizaremos ferramentas de análises exploratórias e
 \textit{scripts} de buscas em bancos de dados para construção da base de dados a
 ser utilizada na etapa posterior.
+
+\subsection{Mineração de dados}
 
 Em seguida, ocorre a etapa de mineração de dados, onde são buscados padrões de
 interesse ou características que representem as tendências dos dados, entre os
