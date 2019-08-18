@@ -202,16 +202,24 @@ tabelas com os dados brutos onde cada linha gerada representa um aluno em uma
 disciplina e as variáveis mapeadas para os construtos da TDT. As tabelas geradas
 serviram como base para as etapas seguintes do processo KDD.
 
-Na etapa de pré-processamento de dados ocorrem as transformações e adaptações
-dos dados para os algoritmos de Mineração de Dados. Entre essas transformações
-podemos citar: normalização, limpeza de valores faltantes, identificação de
-outliers, entre outros. Esta etapa, geralmente, exige muito tempo e esforço. A
-correta execução deste passo resultará em melhores resultados nas etapas
-posteriores.
+Para que as variáveis que dependiam de períodos de tempo fossem coletadas
+corretamente, foi necessário inserir a data final de disciplinas que não
+possuíam esse campo em suas linhas da tabela \textit{mdl\_course}. Nesses casos foi
+inserido a data de fechamento do semestre. A data de início de algumas
+disciplinas também teve que ser corrigida, pois, elas foram criadas nos
+primeiros períodos, mas ocorreram posteriormente.
 
-No contexto deste trabalho, utilizaremos ferramentas de análises exploratórias e
-\textit{scripts} de buscas em bancos de dados para construção da base de dados a
-ser utilizada na etapa posterior.
+Foram necessárias várias iterações de ajustes nos \textit{scripts} e conferência
+dos resultados antes de avançar para a próxima fase, como já havia sido
+previsto, esta foi a etapa que consumiu a maior parcela do tempo de elaboração
+desse trabalho.
+
+As tabelas geradas foram convertidas para planilhas eletrônicas para facilitar o
+processo de filtragem e remoção de erros de implementação ou de configurações
+feitas pelos gestores dos cursos. Foram removidos professores cadastrados como
+alunos, disciplinas ofertadas para alunos repetentes e disciplinas ofertadas
+fora do período (já que essas disciplinas poderiam enviesar os modelos de
+classificação).
 
 \subsection{Mineração de dados}
 
