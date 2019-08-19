@@ -219,30 +219,13 @@ processo de filtragem e remoção de erros de implementação ou de configuraç�
 feitas pelos gestores dos cursos. Foram removidos professores cadastrados como
 alunos, disciplinas ofertadas para alunos repetentes e disciplinas ofertadas
 fora do período (já que essas disciplinas poderiam enviesar os modelos de
-classificação).
+classificação). Também foram eliminadas colunas que poderiam ser utilizadas para
+identificar os alunos, com o objetivo de anonimizar os dados.
 
 \subsection{Mineração de dados}
 
-Em seguida, ocorre a etapa de mineração de dados, onde são buscados padrões de
-interesse ou características que representem as tendências dos dados, entre os
-métodos de busca de padrões podemos citar: clusterização, classificação,
-regressão, entre outros.
-
-Para este trabalho, utilizaremos os algoritmos de classificação a seguir: Árvore
-de Decisão, KNN, e Regressão Logística. Nesta etapa, os parâmetros dos
-algoritmos de classificação serão ajustados para que a performance dos mesmos
-seja melhorada.
-
-Na última etapa, pós-processamento, serão avaliados e interpretados os padrões
-extraídos na etapa de mineração, podem ocorrer retornos a qualquer etapa
-anterior para mais iterações. Esta etapa pode envolver a visualização dos
-padrões e modelos gerados, ou visualização dos dados fornecidos. Neste passo, o
-conhecimento descoberto será documentado para possível uso posterior, em uma
-ferramenta de geração de relatórios ou de visualização, tipo dashboard.
-
-\section{Materiais}
-
-\subsection{Python}
+A análise exploratória das planilhas eletrônicas foi realizada utilizando a
+linguagem de programação Python, na distribuição Anaconda.
 
 Python\footnote{\url{https://www.python.org/} Acesso em: 06 de mar. 2019} é uma
 linguagem de programação de código aberto classificada como linguagem de alto
@@ -254,8 +237,6 @@ desenvolvidas em Python para as mais variadas tarefas, desde servidores HTTP,
 desenvolvimento de aplicações desktop até mineração de dados, inteligência
 artificial e estatística.
 
-\subsection{Anaconda Python Distribution}
-
 A distribuição de código aberto
 Anaconda\footnote{\url{https://www.anaconda.com/} Acesso em: 06 de mar. 2019}  é
 uma maneira fácil de realizar tarefas de mineração de dados e aprendizado de
@@ -263,7 +244,7 @@ máquina em ambientes Linux, Windows ou Mac OS X. Anaconda é um gerenciador de
 pacotes e ambientes e uma distribuição Python especializada em data science com
 mais de 1500 pacotes de código aberto.
 
-\subsection{Jupyter Notebook}
+O ambiente de desenvolvimento selecionado foi o Jupyter Notebook.
 
 Jupyter Notebook\footnote{\url{https://jupyter.org/} Acesso em: 06 de mar. 2019}
 é uma aplicação \textit{web} de código aberto que permite a criação e
@@ -276,7 +257,8 @@ visualização de dados, aprendizado de máquina e mais.
 Jupyter Notebook suporta mais de 40 linguagens de programação incluindo Python e
 já vem pré configurado na distribuição Anaconda.
 
-\subsection{Python Data Analysis Library}
+As planilhas foram carregadas no ambiente utilizando a Python Data Analysis
+Library (pandas).
 
 Python Data Analysis Library\footnote{\url{https://pandas.pydata.org/} Acesso
 em: 06 de mar. 2019}, ou simplesmente pandas, é uma biblioteca de código aberto
@@ -285,22 +267,23 @@ dados de alta performance e fácil uso para a linguagem de programação Python.
 Pandas proporciona estruturas de dados rápidas, flexíveis e expressivas
 desenvolvidas para uso com dados relacionais ou etiquetados.
 
-A biblioteca pandas já vem configurada para uso na distribuição Anaconda.
+Foram analisadas as variáveis dos alunos do último período, após essa analise,
+percebeu-se que nenhum aluno que estava listado havia evadido. Todas as
+ocorrências desses alunos foram marcadas como não evadidos.
 
-\subsection{Numpy}
+Percebeu-se que os administradores dos cursos removeram os alunos que evadiram
+do quarto para o quinto semestre, então, foi necessário recolocar esses alunos
+nas disciplinas que aconteceram após o quarto período. Todos os alunos que
+tiveram de ser adicionados novamente foram marcados como evadidos.
 
-NumPy\footnote{\url{http://www.numpy.org/} Acesso em: 06 de mar. 2019} é o
-pacote fundamental para computação científica em Python. Contento, além de outra
-funcionalidades, um poderoso vetor n-dimensional, funções de broadcast
-sofisticadas, ferramentas de integração com códigos C/C++ e Fortran, ferramentas
-de algebra linear, transformadas de Fourier e números aleatórios.
+\subsection{Pós-processamento}
 
-Além dos óbvios usos científicos, NumPy também pode ser usado como um invólucro
-para dados genéricos. Tipos de dados arbitrários podem ser definidos, isso
-permite que  seja integrado de forma rápida com uma miríade de bases de dados.
-
-NumPy é uma biblioteca de código aberto sob a licença BSD e é presente na
-distribuição Anaconda.
+Na última etapa, pós-processamento, serão avaliados e interpretados os padrões
+extraídos na etapa de mineração, podem ocorrer retornos a qualquer etapa
+anterior para mais iterações. Esta etapa pode envolver a visualização dos
+padrões e modelos gerados, ou visualização dos dados fornecidos. Neste passo, o
+conhecimento descoberto será documentado para possível uso posterior, em uma
+ferramenta de geração de relatórios ou de visualização, tipo dashboard.
 
 \subsection{Scikit-learn}
 
