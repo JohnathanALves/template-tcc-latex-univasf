@@ -214,7 +214,7 @@ Jupyter Notebook suporta mais de 40 linguagens de programação incluindo Python
 já vem pré configurado na distribuição Anaconda.
 
 As planilhas foram carregadas no ambiente utilizando a Python Data Analysis
-Library (pandas).
+Library (pandas) em estruturas de dados denominadas \textit{dataframes}.
 
 Python Data Analysis Library\footnote{\url{https://pandas.pydata.org/} Acesso
 em: 06 de mar. 2019}, ou simplesmente pandas, é uma biblioteca de código aberto
@@ -232,20 +232,41 @@ do quarto para o quinto semestre, então, foi necessário recolocar esses alunos
 nas disciplinas que aconteceram após o quarto período. Todos os alunos que
 tiveram de ser adicionados novamente foram marcados como evadidos.
 
-\subsection{Pós-processamento}
+Os \textit{dataframes} de cada curso foram divididos em dois conjuntos de dados,
+conjunto de teste e conjunto de treino. Para tal, foi utilizada a função
+\textit{train\_test\_split} da bilbioteca pandas. Essa função garante que os
+dados sejam divididos de forma aleatória, o que mantém a mesma distribuição de
+variáveis entre os conjuntos.
 
-Na última etapa, pós-processamento, serão avaliados e interpretados os padrões
-extraídos na etapa de mineração, podem ocorrer retornos a qualquer etapa
-anterior para mais iterações. Esta etapa pode envolver a visualização dos
-padrões e modelos gerados, ou visualização dos dados fornecidos. Neste passo, o
-conhecimento descoberto será documentado para possível uso posterior, em uma
-ferramenta de geração de relatórios ou de visualização, tipo dashboard.
+Cada par de conjunto de dados passou pelas seguintes etapas para cada algoritmo de
+classificação.
 
-\subsection{Scikit-learn}
+Treinamento: utilizando o conjunto de treinamento e por meio das funções e
+classes disponibilizados pela biblioteca pandas, os algoritmos de classificação
+são treinados ou ``aprendem'' os padrões dos dados.
+
+Os algoritmos de classificação selecionados (KNN, Árvore de Decisão e Regressão
+Logística) são disponibilizados pela biblioteca de ML em Python Scikit-learn.
 
 Scikit-learn\footnote{\url{https://scikit-learn.org/} Acesso em: 06 de mar.
 2019} é um módulo Python para aprendizado de máquina de código aberto sob a
 licença BSD. Além das principais tarefas de mineração, como: classificação,
 regressão e clusterização a biblioteca proporciona as visualizações mais básicas
-para análise exploratória. Scikit-learn é compatível com pandas e NumPy e pode
-ser encontrado na distribuição Anaconda.
+para análise exploratória.
+
+Avaliação: utilizando o modelo resultante da etapa de treinamento e o conjunto
+de teste avaliamos o classificador segundo as seguintes métricas: acurácia,
+precisão, sensibilidade, especificidade.
+
+Importancia de variáveis: com o modelo treinado avaliamos quais variáveis
+tiveram mais influencia na performance do modelo através da classe
+\textit{SelectFromModel} da biblioteca \textit{feature\_selection} no
+scikit-learn.
+
+\subsection{Pós-processamento}
+
+Na última etapa, pós-processamento, foram avaliados e interpretados os padrões
+extraídos na etapa de mineração, ocorreram retornos a etapa anterior para mais
+iterações.
+
+Os resultados desse processo serão detalhados no capítulo \ref{resultados}.
