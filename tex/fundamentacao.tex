@@ -477,7 +477,11 @@ aprendizado supervisionado é a classificação dos dados, portanto,  o aumento 
 ganho de informação influencia na eficiência da classificação nos subdomínios
 criados pela divisão. Encontrar a divisão que traga o máximo de ganho de
 informação, ou seja, eficiência na classificação é o objetivo do dos algoritmos
-de otimização no aprendizado supervisionado baseado em árvores de decisão.
+de otimização no aprendizado supervisionado baseado em árvores de decisão. Na
+Figura \ref{decisionTree} vemos um exemplo de árvore de decisão em termos de
+divisão de domínios focado no ganho de informação.
+
+\imagem{.60}{decision_tree}{\label{decisionTree}Exemplo de árvore de decisão usada para classificação construída com um domínio de dados uni-dimensional}{\citeonline{suthaharan2016machine}}
 
 \citeonline{suthaharan2016machine} traz um exemplo de classificação usando
 árvore de decisão. Suponha que temos um sistema que produz eventos (observações)
@@ -516,10 +520,7 @@ Esta equação enfatiza a seguinte inequação, (quando \(q_0 > p_0)\):
 As diferenças absolutas na inequação acima são as medidas quantitativas de
 proporcionalidade entre as classes em seus respectivos subdomínios. Essas medida
 probabilística é uma boa métrica para abordagem de otimização de árvores de
-decisão. A Figura \ref{decisionTree} vemos um exemplo de árvore de decisão em
-termos de divisão de domínios focado no ganho de informação.
-
-\imagem{.60}{decision_tree}{\label{decisionTree}Exemplo de árvore de decisão usada para classificação construída com um domínio de dados uni-dimensional}{\citeonline{suthaharan2016machine}}
+decisão.
 
 \subsubsection{K-ésimo vizinho mais próximo}
 
