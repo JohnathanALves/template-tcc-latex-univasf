@@ -9,6 +9,58 @@ próprios artefatos.
 
 \section{Pré-processamento}
 
+O Quadro \ref{reducedDataTables} apresenta e resume essas tabelas auxiliares.
+
+\begin{quadro}[!htb]
+  \centering
+  \caption{Descrição das tabelas criadas apenas com dados dos cursos selecionados}
+  \label{reducedDataTables}
+  \begin{tabular}{|l|l|}
+    \hline
+    \multicolumn{1}{|c|}{\textbf{Tabela}} & \multicolumn{1}{c|}{\textbf{Descrição}} \\ \hline
+    \textit{adm} & \begin{tabular}[c]{@{}l@{}}Tabela base agrupando dados de cada aluno do curso \\ Bacharelado em Administração Pública em cada \\ disciplina em que ele cursou.\end{tabular} \\ \hline
+    \textit{adm\_base\_log\_reduzido} & \begin{tabular}[c]{@{}l@{}}Tabela com registros de log dos alunos e cursos do curso\\ Bacharelado em Administração Pública.\end{tabular} \\ \hline
+    \textit{adm\_disciplinas} & \begin{tabular}[c]{@{}l@{}}Registra o identificador das disciplinas do curso de\\ Bacharelado em Administração Pública, data de início \\ e data de fim.\end{tabular} \\ \hline
+    \textit{adm\_id\_alunos} & \begin{tabular}[c]{@{}l@{}}Registra o identificador dos alunos matriculados no \\ curso de Bacharelado em Administração Pública.\end{tabular} \\ \hline
+    \textit{lic\_ped} & \begin{tabular}[c]{@{}l@{}}Tabela base agrupando dados de cada aluno do curso \\ Licenciatura em Pedagogia em cada disciplina\\ em que ele cursou.\end{tabular} \\ \hline
+    \textit{lic\_ped\_base\_log\_reduzido} & \begin{tabular}[c]{@{}l@{}}Tabela com registros de log dos alunos e cursos do curso\\ Licenciatura em Pedagogia.\end{tabular} \\ \hline
+    \textit{lic\_ped\_disciplinas} & \begin{tabular}[c]{@{}l@{}}Registra o identificador das disciplinas do curso de\\ Licenciatura  em Pedagogia, data de início e data de fim.\end{tabular} \\ \hline
+    \textit{lic\_ped\_id\_alunos} & \begin{tabular}[c]{@{}l@{}}Registra o identificador dos alunos matriculados no\\  curso de Licenciatura em Pedagogia.\end{tabular} \\ \hline
+  \end{tabular}
+  \Ididthis
+\end{quadro}
+
+O Quadro \ref{variablesDescritionTable} descreve essas
+variáveis e relaciona as mesmas com os construtos da TDT e seus identificadores.
+
+\begin{quadro}[!htb]
+  \centering
+  \caption{Lista das variáveis e respectivos construtos e seus identificadores}
+  \label{variablesDescritionTable}
+  \begin{tabular}{|l|l|l|}
+    \hline
+    \multicolumn{1}{|c|}{\textbf{Identificador}} & \multicolumn{1}{c|}{\textbf{Variáveis}} & \multicolumn{1}{c|}{\textbf{Construto}} \\ \hline
+    VAR01 & \begin{tabular}[c]{@{}l@{}}Quantidade geral de postagens do aluno em fóruns,\\ por disciplina.\end{tabular} & Diálogo \\ \hline
+    VAR02 & \begin{tabular}[c]{@{}l@{}}Quantidade geral de mensagens enviadas pelo\\ aluno dentro do ambiente, por semestre.\end{tabular} & Diálogo \\ \hline
+    VAR03 & \begin{tabular}[c]{@{}l@{}}Quantidade geral de mensagens recebidas pelo\\ aluno dentro do ambiente, por semestre.\end{tabular} & Diálogo \\ \hline
+    VAR04 & \begin{tabular}[c]{@{}l@{}}Quantidade geral de recursos disponibilizados pelo\\ professor (página web, vídeo, pdfs, entre outros)\\ por disciplina.\end{tabular} & Estrutura \\ \hline
+    VAR05a & \begin{tabular}[c]{@{}l@{}}Quantidade de acessos do aluno ao ambiente por\\ turno (Manhã), por semestre.\end{tabular} & Autonomia \\ \hline
+    VAR05b & \begin{tabular}[c]{@{}l@{}}Quantidade de acessos do aluno ao ambiente por\\ turno (Tarde), por semestre.\end{tabular} & Autonomia \\ \hline
+    VAR05c & \begin{tabular}[c]{@{}l@{}}Quantidade de acessos do aluno ao ambiente por\\ turno (Noite), por semestre.\end{tabular} & Autonomia \\ \hline
+    VAR06 & \begin{tabular}[c]{@{}l@{}}Quantidade de colegas diferentes para quem o\\ aluno enviou mensagens no ambiente, por\\ semestre.\end{tabular} & Diálogo \\ \hline
+    VAR07 & \begin{tabular}[c]{@{}l@{}}Quantidade de acessos do aluno ao ambiente no\\ semestre.\end{tabular} & Autonomia \\ \hline
+    VAR08 & \begin{tabular}[c]{@{}l@{}}Quantidade de mensagens enviadas pelo aluno\\ aos professores pelo ambiente, por semestre.\end{tabular} & Diálogo \\ \hline
+    VAR09 & \begin{tabular}[c]{@{}l@{}}Quantidade de mensagens dos professores recebidas\\ pelo aluno no ambiente, por semestre.\end{tabular} & Diálogo \\ \hline
+    VAR10 & \begin{tabular}[c]{@{}l@{}}Quantidade de mensagens de colegas recebidas pelo\\ aluno no ambiente, por semestre.\end{tabular} & Diálogo \\ \hline
+    VAR11 & \begin{tabular}[c]{@{}l@{}}Quantidade de mensagens enviadas pelo aluno para\\ outros colegas no ambiente, por semestre.\end{tabular} & Diálogo \\ \hline
+    VAR12 & \begin{tabular}[c]{@{}l@{}}Quantidade de atividades com prazos de resposta ou\\ envio definidos por professor, por disciplina.\end{tabular} & Estrutura \\ \hline
+    VAR13 & \begin{tabular}[c]{@{}l@{}}Quantidade de acessos do aluno aos diferentes tipos\\ de atividades disponibilizadas (webquest, fórum,\\ quiz, entre outros), por disciplina.\end{tabular} & Autonomia \\ \hline
+    VAR14 & \begin{tabular}[c]{@{}l@{}}Quantidade de fóruns de discussão disponibilizados\\ sobre os conteúdos por disciplina.\end{tabular} & Estrutura \\ \hline
+    VAR15 & \begin{tabular}[c]{@{}l@{}}Quantidade de acessos do aluno aos fóruns, por\\ disciplina.\end{tabular} & Autonomia \\ \hline
+  \end{tabular}
+  \Otherguydidthis{ramos2016abordagem}
+\end{quadro}
+
 \section{Mineração de Dados}
 
 \section{Pós-processamento}
