@@ -7,9 +7,11 @@ próprios artefatos.
 
 \section{Entrada de dados}
 
-\section{Pré-processamento}
-
-O Quadro \ref{reducedDataTables} apresenta e resume essas tabelas auxiliares.
+Para a etapa de entrada de dados, foram desenvolvidos \textit{scripts} em SQL
+que criavam tabelas na base de dados em MySQL com subconjuntos de dados
+relacionados com os cursos selecionados para esse estudo. Esses \textit{scripts}
+estão disponíveis no Anexo \ref{anex:anexo1}. O Quadro \ref{reducedDataTables}
+apresenta e resume essas tabelas auxiliares.
 
 \begin{quadro}[!htb]
   \centering
@@ -30,8 +32,18 @@ O Quadro \ref{reducedDataTables} apresenta e resume essas tabelas auxiliares.
   \Ididthis
 \end{quadro}
 
-O Quadro \ref{variablesDescritionTable} descreve essas
-variáveis e relaciona as mesmas com os construtos da TDT e seus identificadores.
+Essas tabelas se tornaram necessárias, pois, executar \textit{scripts} que
+buscassem dados em toda a base do Moodle demandava horas de processamento. Em
+contrapartida, utilizando apenas essas tabelas o tempo de execução foi reduzido
+para poucos minutos.
+
+\section{Pré-processamento}
+
+Utilizando as tabelas do Quadro \ref{reducedDataTables} e os \textit{scripts}
+disponíveis no Anexo \ref{anex:anexo1}, as variáveis, mapeadas para construtos
+da TDT por \citeonline{ramos2016abordagem}, foram salvas em colunas de uma
+tabela segundo os identificadores listados no Quadro
+\ref{variablesDescritionTable}.
 
 \begin{quadro}[!htb]
   \centering
