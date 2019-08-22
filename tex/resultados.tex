@@ -41,8 +41,8 @@ para poucos minutos.
 
 Utilizando as tabelas do Quadro \ref{reducedDataTables} e os \textit{scripts}
 disponíveis no Anexo \ref{anex:anexo1}, as variáveis, mapeadas para construtos
-da TDT por \citeonline{ramos2016abordagem}, foram salvas em colunas de uma
-tabela segundo os identificadores listados no Quadro
+da TDT por \citeonline{ramos2016abordagem}, foram salvas como valores em uma
+tabela cujas colunas eram os identificadores listados no Quadro
 \ref{variablesDescritionTable}.
 
 \begin{quadro}[!htb]
@@ -73,7 +73,46 @@ tabela segundo os identificadores listados no Quadro
   \Otherguydidthis{ramos2016abordagem}
 \end{quadro}
 
+Além das variáveis, cada linha possui o identificador de um aluno e de uma
+disciplina. Dessa forma, cada linha representa um aluno em uma disciplina do
+curso.
+
+Essas tabelas foram coneconvertidasrtidas para planilhas eletrônicas para facilitar o
+processo de correção e validação dos resultados. As planilhas serviram como base
+para os processos de mineração de dados.
+
 \section{Mineração de Dados}
+
+As planilhas eletrônicas foram carregadas em \textit{dataframes}, como foi
+descrito no capítulo \ref{metodos}.
+
+Os dados do curso de Licenciatura em Pedagogia somaram 6240 entradas. Sendo que,
+$50,6\%$ foram marcados como não evadidos e $49,4\%$ foram marcados como
+evadido, como ilustra a Figura \ref{classDistribuitionPedTotal}. A proporção das
+classes após a divisão dos dados em conjunto de testes e conjunto de treinamento
+é mostrada nas Figuras \ref{classDistribuitionPedTest} e
+\ref{classDistribuitionPedTrain}, respectivamente.
+\begin{figure}[!htb]
+  \centering
+  \caption{\label{classDistribuitionPed} Distribuição de classes para os dados do curso de Licenciatura em Pedagogia.}
+  \subcaptionbox{\label{classDistribuitionPedTotal}Distribuição em todos os dados.}{\includegraphics[scale=.47]{img/barplot_pedagogia}}\qquad
+  \subcaptionbox{\label{classDistribuitionPedTest}Distribuição para os dados de teste.}{\includegraphics[scale=.47]{img/barplot_pedagogia_testes}}\qquad
+  \subcaptionbox{\label{classDistribuitionPedTrain}Distribuição para os dados de treinamento.}{\includegraphics[scale=.47]{img/barplot_pedagogia_treinamento}}
+  \vspace{1.5em}
+  \Ididthis
+\end{figure}
+
+
+\begin{figure}[!htb]
+  \centering
+  \caption{\label{classDistribuitionAdm} Distribuição de classes para os dados do curso de Bacharelado em Adminstração Pública.}
+  \subcaptionbox{\label{classDistribuitionAdmTotal}Distribuição em todos os dados.}{\includegraphics[scale=.47]{img/barplot_adm}}\qquad
+  \subcaptionbox{\label{classDistribuitionAdmTest}Distribuição para os dados de teste.}{\includegraphics[scale=.47]{img/barplot_adm_testes}}\qquad
+  \subcaptionbox{\label{classDistribuitionAdmTrain}Distribuição para os dados de treinamento.}{\includegraphics[scale=.47]{img/barplot_adm_treinamento}}
+  \vspace{1.5em}
+  \Ididthis
+\end{figure}
+
 
 \section{Pós-processamento}
 
