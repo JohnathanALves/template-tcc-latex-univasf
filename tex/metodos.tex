@@ -70,20 +70,21 @@ poderiam representar cada um dos três construtos da TDT. Os dados das quais
 foram retiradas as variáveis estão armazenados nas bases de dados do Sistema de
 Gestão de Aprendizado Moodle\footnote{\url{https://moodle.org/} Acesso em: 06 de
 mar. 2019}, atualmente, em uso pelos cursos de graduação oferecidos na
-modalidade EAD pela UNIVASF. Os dados foram cedidos pela Secretaria de Educaçao a Distância
-(SEAD) da UNIVASF, por meio da Secretaria de Tecnologia da Informação (STI), responsável pelo
-suporte e manutenção das plataformas de EAD na instituição. Os dados foram então armazenados
-em um computador pessoal utilizando o Sistema de Gerenciamento de Banco de Dados (SGBD) MySQL.
+modalidade EAD pela UNIVASF. Os dados foram cedidos pela Secretaria de Educaçao
+a Distância (SEAD) da UNIVASF, por meio da Secretaria de Tecnologia da
+Informação (STI), responsável pelo suporte e manutenção das plataformas de EAD
+na instituição. Os dados foram então armazenados em um computador pessoal
+utilizando o Sistema de Gerenciamento de Banco de Dados (SGBD) MySQL.
 
 O MySQL\footnote{\url{https://www.mysql.com/} Acesso em: 06 de mar. 2019} é o SGBD
 mais popular no mundo. Provê performance, confiabilidade e facilidade de uso,
 MySQL vem liderando a escolha de aplicações \textit{web}, usado por grandes
 empresas na internet como: Facebook, Twitter, YouTube, Yahoo! e muitas outras.
 
-O MySQL é utiliza Linguagem de Busca Estruturada (SQL, do inglês,
-\textit{Structured Query Language}). Entre as suas vantagens podemos
-listar: portabilidade, compatibilidade, excelente desempenho e estabilidade,
-facilidade de manuseio e é um \textit{software} livre sob a licença GPL.
+O MySQL utiliza Linguagem de Busca Estruturada (SQL, do inglês,
+\textit{Structured Query Language}). Entre as suas vantagens podemos listar:
+portabilidade, compatibilidade, excelente desempenho e estabilidade, facilidade
+de manuseio e é um \textit{software} livre sob a licença GPL.
 
 O Moodle é uma plataforma de ensino projetada para oferecer a educadores,
 administradores e estudantes, com uma sistema integrado, simple e robusto, a
@@ -92,8 +93,8 @@ mais de 80 empresas ao redor do mundo.
 
 O banco de dados Moodle é grande e complexo, retendo informações sobre os
 diversos componentes de uma sala de aula virtual como \textit{chats},
-questionários \textit{online} e fóruns de discussão, além de manter um registro de
-todas as ações do usuário nos seus componentes.
+questionários \textit{online} e fóruns de discussão, além de manter um registro
+de todas as ações do usuário nos seus componentes.
 
 A depender da versão do Moodle, a quantidade de tabelas na base de dados pode
 variar significativamente. A versão utilizada neste trabalho possuía cerca de
@@ -156,25 +157,25 @@ apenas as resultantes da etapa de seleção de variáveis realizada por Ramos em
 sua tese de doutorado. Essas variáveis também serão descritas no capítulo de
 resultados.
 
-Foram elaborados \textit{scripts} SQL que, a partir das tabelas mencionadas
-nos Quadros \ref{moodleTableReferences} e \ref{reducedDataTables}, foram construídas
+Foram elaborados \textit{scripts} SQL que, a partir das tabelas mencionadas nos
+Quadros \ref{moodleTableReferences} e \ref{reducedDataTables}, foram construídas
 tabelas com os dados brutos, onde cada linha gerada representa um aluno em uma
 disciplina e as variáveis mapeadas para os construtos da TDT. As tabelas geradas
 serviram como base para as etapas seguintes do processo KDD.
 
 Para que as variáveis que dependiam de períodos de tempo fossem coletadas
 corretamente, foi necessário inserir a data final de disciplinas que não
-possuíam esse campo em suas linhas da tabela \textit{mdl\_course}. Nesses casos foi
-inserida a data de fechamento do semestre. A data de início de algumas
+possuíam esse campo em suas linhas da tabela \textit{mdl\_course}. Nesses casos
+foi inserida a data de fechamento do semestre. A data de início de algumas
 disciplinas também teve que ser corrigida, pois, elas foram criadas nos
 primeiros períodos, mas ocorreram posteriormente.
 
 Foram necessárias várias iterações de ajustes nos \textit{scripts} e conferência
 dos resultados antes de avançar para a próxima fase, como já havia sido
 previsto, esta foi a etapa que consumiu a maior parcela do tempo de elaboração
-desse trabalho. A conferência dos dados se deu a partir de acessos com perfil de professor
-no Moodle, com acesso a várias disciplinas, onde eram feitas as contagem de eventos realcionados
-às variáveis coletadas.
+desse trabalho. A conferência dos dados se deu a partir de acessos com perfil de
+professor no Moodle, com acesso a várias disciplinas, onde eram feitas as
+contagem de eventos realcionados às variáveis coletadas.
 
 As tabelas geradas foram convertidas para planilhas eletrônicas para facilitar o
 processo de filtragem e remoção de erros de implementação ou de configurações
@@ -184,17 +185,17 @@ fora do período (já que essas disciplinas poderiam enviesar os algoritmos de
 classificação). Também foram eliminadas colunas que poderiam ser utilizadas para
 identificar os alunos, com o objetivo de anonimizar os dados.
 
-Disciplinas como Estágio Supervisionado, Trabalho de Conclusão de Curso entre outras,
-também foram eliminadas, pois não seguem a mesma estrutura de disciplinas tradicionais,
-podendo também causar vieses nos algoritmos.
+Disciplinas como Estágio Supervisionado, Trabalho de Conclusão de Curso entre
+outras, também foram eliminadas, pois não seguem a mesma estrutura de
+disciplinas tradicionais, podendo também causar vieses nos algoritmos.
 
 Todos os \textit{scripts} gerados nessa etapa estão disponíveis no Anexo
 \ref{anex:anexo1}
 
 \subsection{Mineração de dados}
 
-A análise exploratória dos dados foi realizada utilizando a
-linguagem de programação Python, na distribuição Anaconda.
+A análise exploratória dos dados foi realizada utilizando a linguagem de
+programação Python, na distribuição Anaconda.
 
 Python\footnote{\url{https://www.python.org/} Acesso em: 06 de mar. 2019} é uma
 linguagem de programação de código aberto classificada como linguagem de alto
@@ -213,12 +214,13 @@ máquina em ambientes Linux, Windows ou Mac OS X. Anaconda é um gerenciador de
 pacotes e ambientes e uma distribuição Python especializada em data science com
 mais de 1500 pacotes de código aberto.
 
-O ambiente de desenvolvimento selecionado foi o Jupyter Notebook, \footnote{\url{https://jupyter.org/} Acesso em: 06 de mar. 2019}
-que é uma aplicação \textit{web} de código aberto que permite a criação e
-compartilhamento de documentos que contém código em tempo de execução, equações,
-visualizações e textos narrativos. Funciona como uma IDE (do inglês,
-\textit{Integrated Development Environment}) e foi desenvolvido para tarefas de
-limpeza e transformação de dados, simulações numéricas, modelagem estatística,
+O ambiente de desenvolvimento selecionado foi o Jupyter Notebook,
+\footnote{\url{https://jupyter.org/} Acesso em: 06 de mar. 2019} que é uma
+aplicação \textit{web} de código aberto que permite a criação e compartilhamento
+de documentos que contém código em tempo de execução, equações, visualizações e
+textos narrativos. Funciona como uma IDE (do inglês, \textit{Integrated
+Development Environment}) e foi desenvolvido para tarefas de limpeza e
+transformação de dados, simulações numéricas, modelagem estatística,
 visualização de dados, aprendizado de máquina e mais.
 
 Jupyter Notebook suporta mais de 40 linguagens de programação incluindo Python e
@@ -227,7 +229,7 @@ já vem pré configurado na distribuição Anaconda.
 As planilhas foram carregadas no ambiente utilizando a Python Data Analysis
 Library (pandas) em estruturas de dados denominadas \textit{dataframes}.
 
-O Python Data Analysis Library\footnote{\url{https://pandas.pydata.org/} Acesso
+A Python Data Analysis Library\footnote{\url{https://pandas.pydata.org/} Acesso
 em: 06 de mar. 2019}, ou simplesmente pandas, é uma biblioteca de código aberto
 sob a licença BSD que provê estruturas de dados e ferramentas de análise de
 dados de alta performance e fácil uso para a linguagem de programação Python.
@@ -265,12 +267,12 @@ licença BSD. Além das principais tarefas de mineração, como: classificação
 regressão e clusterização a biblioteca proporciona as visualizações mais básicas
 para análise exploratória.
 
-2 - Avaliação: utilizando o modelo resultante da etapa de treinamento e o conjunto
-de teste avaliamos o classificador segundo as seguintes métricas: acurácia,
-precisão, sensibilidade, especificidade.
+2 - Avaliação: utilizando o modelo resultante da etapa de treinamento e o
+conjunto de teste avaliamos o classificador segundo as seguintes métricas:
+acurácia, precisão, sensibilidade, especificidade.
 
-3 - Importância de variáveis: de posse do modelo treinado, avaliamos quais variáveis
-tiveram mais influência na performance do modelo através da classe
+3 - Importância de variáveis: de posse do modelo treinado, avaliamos quais
+variáveis tiveram mais influência na performance do modelo através da classe
 \textit{SelectFromModel} da biblioteca \textit{feature\_selection} no
 scikit-learn.
 
