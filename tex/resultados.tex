@@ -187,6 +187,33 @@ respectivamente.
   \end{tabular}
 \end{table}
 
+Sabendo-se dessas informações, principiaram-se os experimentos com os algoritmos
+de classificação. Destes, o primeiro foi o KNN. Iniciou-se pela escolha do
+parâmetro \(k\), a quantidade de vizinhos. Para tal, foram testados valores
+entre \(3\) e \(201\), mantendo-se sempre uma quantidade impar de vizinhos. Esse
+experimento foi repetido, porém, com os dados normalizados, na tentativa de
+remover a influência da diferença de escalas entre as variáveis. Nas Figuras
+\ref{knnKResultsPed} e \ref{knnKResultsAdm} podemos ver os gráficos resultantes
+desses experimentos.
+
+\begin{figure}[!htb]
+  \centering
+  \caption{\label{knnKResultsPed} Gráficos de valores de acurácia para valores de K, com K variando entre \(3\) e \(201\) com incremento de \(2\) para o curso de Licenciatura em Pedagogia.}
+  \subcaptionbox{Dados não normalizados.}{\includegraphics[scale=.45]{img/knn_neigh_ped}}\qquad
+  \subcaptionbox{Dados normalizados.}{\includegraphics[scale=.45]{img/knn_neigh_norm_ped}}
+  \vspace{1.5em}
+  \Ididthis
+\end{figure}
+
+\begin{figure}[!htb]
+  \centering
+  \caption{\label{knnKResultsAdm} Gráficos de valores de acurácia para valores de K, com K variando entre \(3\) e \(201\) com incremento de \(2\) para o cuso de Bacharelado em Administração Pública.}
+  \subcaptionbox{Dados não normalizados.}{\includegraphics[scale=.45]{img/knn_neigh_adm}}\qquad
+  \subcaptionbox{Dados normalizados.}{\includegraphics[scale=.45]{img/knn_neigh_norm_adm}}
+  \vspace{1.5em}
+  \Ididthis
+\end{figure}
+
 \section{Pós-processamento}
 
 \section{Conhecimento Obtido}
