@@ -45,33 +45,41 @@ da TDT por \citeonline{ramos2016abordagem}, foram salvas como valores separados
 por vígulas (CSV) em uma tabela cujas colunas eram os identificadores listados
 no Quadro \ref{variablesDescritionTable}.
 
-\begin{quadro}[!htb]
-  \centering
+\begin{center}
+\renewcommand\LTcaptype{quadro}
+\begin{longtable}[c]{|l|l|l|}
   \caption{Lista das variáveis e respectivos construtos e seus identificadores}
-  \label{variablesDescritionTable}
-  \begin{tabular}{|l|l|l|}
-    \hline
-    \multicolumn{1}{|c|}{\textbf{Identificador}} & \multicolumn{1}{c|}{\textbf{Variáveis}} & \multicolumn{1}{c|}{\textbf{Construto}} \\ \hline
-    VAR01 & \begin{tabular}[c]{@{}l@{}}Quantidade geral de postagens do aluno em fóruns,\\ por disciplina.\end{tabular} & Diálogo \\ \hline
-    VAR02 & \begin{tabular}[c]{@{}l@{}}Quantidade geral de mensagens enviadas pelo\\ aluno dentro do ambiente, por semestre.\end{tabular} & Diálogo \\ \hline
-    VAR03 & \begin{tabular}[c]{@{}l@{}}Quantidade geral de mensagens recebidas pelo\\ aluno dentro do ambiente, por semestre.\end{tabular} & Diálogo \\ \hline
-    VAR04 & \begin{tabular}[c]{@{}l@{}}Quantidade geral de recursos disponibilizados pelo\\ professor (página web, vídeo, pdfs, entre outros)\\ por disciplina.\end{tabular} & Estrutura \\ \hline
-    VAR05a & \begin{tabular}[c]{@{}l@{}}Quantidade de acessos do aluno ao ambiente por\\ turno (Manhã), por semestre.\end{tabular} & Autonomia \\ \hline
-    VAR05b & \begin{tabular}[c]{@{}l@{}}Quantidade de acessos do aluno ao ambiente por\\ turno (Tarde), por semestre.\end{tabular} & Autonomia \\ \hline
-    VAR05c & \begin{tabular}[c]{@{}l@{}}Quantidade de acessos do aluno ao ambiente por\\ turno (Noite), por semestre.\end{tabular} & Autonomia \\ \hline
-    VAR06 & \begin{tabular}[c]{@{}l@{}}Quantidade de colegas diferentes para quem o\\ aluno enviou mensagens no ambiente, por\\ semestre.\end{tabular} & Diálogo \\ \hline
-    VAR07 & \begin{tabular}[c]{@{}l@{}}Quantidade de acessos do aluno ao ambiente no\\ semestre.\end{tabular} & Autonomia \\ \hline
-    VAR08 & \begin{tabular}[c]{@{}l@{}}Quantidade de mensagens enviadas pelo aluno\\ aos professores pelo ambiente, por semestre.\end{tabular} & Diálogo \\ \hline
-    VAR09 & \begin{tabular}[c]{@{}l@{}}Quantidade de mensagens dos professores recebidas\\ pelo aluno no ambiente, por semestre.\end{tabular} & Diálogo \\ \hline
-    VAR10 & \begin{tabular}[c]{@{}l@{}}Quantidade de mensagens de colegas recebidas pelo\\ aluno no ambiente, por semestre.\end{tabular} & Diálogo \\ \hline
-    VAR11 & \begin{tabular}[c]{@{}l@{}}Quantidade de mensagens enviadas pelo aluno para\\ outros colegas no ambiente, por semestre.\end{tabular} & Diálogo \\ \hline
-    VAR12 & \begin{tabular}[c]{@{}l@{}}Quantidade de atividades com prazos de resposta ou\\ envio definidos por professor, por disciplina.\end{tabular} & Estrutura \\ \hline
-    VAR13 & \begin{tabular}[c]{@{}l@{}}Quantidade de acessos do aluno aos diferentes tipos\\ de atividades disponibilizadas (webquest, fórum,\\ quiz, entre outros), por disciplina.\end{tabular} & Autonomia \\ \hline
-    VAR14 & \begin{tabular}[c]{@{}l@{}}Quantidade de fóruns de discussão disponibilizados\\ sobre os conteúdos por disciplina.\end{tabular} & Estrutura \\ \hline
-    VAR15 & \begin{tabular}[c]{@{}l@{}}Quantidade de acessos do aluno aos fóruns, por\\ disciplina.\end{tabular} & Autonomia \\ \hline
-  \end{tabular}
-  \Otherguydidthis{ramos2016abordagem}
-\end{quadro}
+  \label{variablesDescritionTable}\\
+  \hline
+  \multicolumn{1}{|c|}{\textbf{Identificador}} & \multicolumn{1}{c|}{\textbf{Variáveis}} & \multicolumn{1}{c|}{\textbf{Construto}} \\ \hline
+  \endfirsthead
+  %
+  \multicolumn{3}{c}%
+  {{\bfseries Quadro \thequadro\ continuação da página anterior}} \\
+  \hline
+  \multicolumn{1}{|c|}{\textbf{Identificador}} & \multicolumn{1}{c|}{\textbf{Variáveis}} & \multicolumn{1}{c|}{\textbf{Construto}} \\ \hline
+  \endhead
+  %
+  VAR01 & \begin{tabular}[c]{@{}l@{}}Quantidade geral de postagens do aluno em fóruns,\\ por disciplina.\end{tabular} & Diálogo \\ \hline
+  VAR02 & \begin{tabular}[c]{@{}l@{}}Quantidade geral de mensagens enviadas pelo\\ aluno dentro do ambiente, por semestre.\end{tabular} & Diálogo \\ \hline
+  VAR03 & \begin{tabular}[c]{@{}l@{}}Quantidade geral de mensagens recebidas pelo\\ aluno dentro do ambiente, por semestre.\end{tabular} & Diálogo \\ \hline
+  VAR04 & \begin{tabular}[c]{@{}l@{}}Quantidade geral de recursos disponibilizados pelo\\ professor (página web, vídeo, pdfs, entre outros)\\ por disciplina.\end{tabular} & Estrutura \\ \hline
+  VAR05a & \begin{tabular}[c]{@{}l@{}}Quantidade de acessos do aluno ao ambiente por\\ turno (Manhã), por semestre.\end{tabular} & Autonomia \\ \hline
+  VAR05b & \begin{tabular}[c]{@{}l@{}}Quantidade de acessos do aluno ao ambiente por\\ turno (Tarde), por semestre.\end{tabular} & Autonomia \\ \hline
+  VAR05c & \begin{tabular}[c]{@{}l@{}}Quantidade de acessos do aluno ao ambiente por\\ turno (Noite), por semestre.\end{tabular} & Autonomia \\ \hline
+  VAR06 & \begin{tabular}[c]{@{}l@{}}Quantidade de colegas diferentes para quem o\\ aluno enviou mensagens no ambiente, por\\ semestre.\end{tabular} & Diálogo \\ \hline
+  VAR07 & \begin{tabular}[c]{@{}l@{}}Quantidade de acessos do aluno ao ambiente no\\ semestre.\end{tabular} & Autonomia \\ \hline
+  VAR08 & \begin{tabular}[c]{@{}l@{}}Quantidade de mensagens enviadas pelo aluno\\ aos professores pelo ambiente, por semestre.\end{tabular} & Diálogo \\ \hline
+  VAR09 & \begin{tabular}[c]{@{}l@{}}Quantidade de mensagens dos professores recebidas\\ pelo aluno no ambiente, por semestre.\end{tabular} & Diálogo \\ \hline
+  VAR10 & \begin{tabular}[c]{@{}l@{}}Quantidade de mensagens de colegas recebidas pelo\\ aluno no ambiente, por semestre.\end{tabular} & Diálogo \\ \hline
+  VAR11 & \begin{tabular}[c]{@{}l@{}}Quantidade de mensagens enviadas pelo aluno para\\ outros colegas no ambiente, por semestre.\end{tabular} & Diálogo \\ \hline
+  VAR12 & \begin{tabular}[c]{@{}l@{}}Quantidade de atividades com prazos de resposta ou\\ envio definidos por professor, por disciplina.\end{tabular} & Estrutura \\ \hline
+  VAR13 & \begin{tabular}[c]{@{}l@{}}Quantidade de acessos do aluno aos diferentes tipos\\ de atividades disponibilizadas (webquest, fórum,\\ quiz, entre outros), por disciplina.\end{tabular} & Autonomia \\ \hline
+  VAR14 & \begin{tabular}[c]{@{}l@{}}Quantidade de fóruns de discussão disponibilizados\\ sobre os conteúdos por disciplina.\end{tabular} & Estrutura \\ \hline
+  VAR15 & \begin{tabular}[c]{@{}l@{}}Quantidade de acessos do aluno aos fóruns, por\\ disciplina.\end{tabular} & Autonomia \\ \hline
+\end{longtable}
+\Otherguydidthis{ramos2016abordagem}
+\end{center}
 
 Além das variáveis, cada linha possui o identificador de um aluno e de uma
 disciplina. Dessa forma, cada linha representa um aluno em uma disciplina do
@@ -96,9 +104,9 @@ classes após a divisão dos dados em conjunto de testes e conjunto de treinamen
 \begin{figure}[!htb]
   \centering
   \caption{\label{classDistribuitionPed} Distribuição de classes para os dados do curso de Licenciatura em Pedagogia.}
-  \subcaptionbox{\label{classDistribuitionPedTotal}Distribuição em todos os dados.}{\includegraphics[scale=.47]{img/barplot_pedagogia}}\qquad
-  \subcaptionbox{\label{classDistribuitionPedTest}Distribuição para os dados de teste.}{\includegraphics[scale=.47]{img/barplot_pedagogia_testes}}\qquad
-  \subcaptionbox{\label{classDistribuitionPedTrain}Distribuição para os dados de treinamento.}{\includegraphics[scale=.47]{img/barplot_pedagogia_treinamento}}
+  \subcaptionbox{\label{classDistribuitionPedTotal}Distribuição em todos os dados.}{\includegraphics[scale=.29]{img/barplot_pedagogia}}\qquad
+  \subcaptionbox{\label{classDistribuitionPedTest}Distribuição para os dados de teste.}{\includegraphics[scale=.29]{img/barplot_pedagogia_testes}}\qquad
+  \subcaptionbox{\label{classDistribuitionPedTrain}Distribuição para os dados de treinamento.}{\includegraphics[scale=.29]{img/barplot_pedagogia_treinamento}}
   \vspace{1.5em}
   \Ididthis
 \end{figure}
@@ -113,17 +121,71 @@ de treinamento é mostrada nas Figuras \ref{classDistribuitionAdmTest} e
 \begin{figure}[!htb]
   \centering
   \caption{\label{classDistribuitionAdm} Distribuição de classes para os dados do curso de Bacharelado em Administração Pública.}
-  \subcaptionbox{\label{classDistribuitionAdmTotal}Distribuição em todos os dados.}{\includegraphics[scale=.47]{img/barplot_adm}}\qquad
-  \subcaptionbox{\label{classDistribuitionAdmTest}Distribuição para os dados de teste.}{\includegraphics[scale=.47]{img/barplot_adm_testes}}\qquad
-  \subcaptionbox{\label{classDistribuitionAdmTrain}Distribuição para os dados de treinamento.}{\includegraphics[scale=.47]{img/barplot_adm_treinamento}}
+  \subcaptionbox{\label{classDistribuitionAdmTotal}Distribuição em todos os dados.}{\includegraphics[scale=.29]{img/barplot_adm}}\qquad
+  \subcaptionbox{\label{classDistribuitionAdmTest}Distribuição para os dados de teste.}{\includegraphics[scale=.29]{img/barplot_adm_testes}}\qquad
+  \subcaptionbox{\label{classDistribuitionAdmTrain}Distribuição para os dados de treinamento.}{\includegraphics[scale=.29]{img/barplot_adm_treinamento}}
   \vspace{1.5em}
   \Ididthis
 \end{figure}
 
-As Tabelas \ref{decribingStatisticsPed} e \ref{decribingStatisticsPed}
+As Tabelas \ref{decribingStatisticsPed} e \ref{decribingStatisticsAdm}
 apresentam as estatísticas descritivas das variáveis coletadas no curso de
 Licenciatura em Pedagogia e Bacharelado em Administração Pública,
 respectivamente.
+
+\begin{table}[!htb]
+  \centering
+  \caption{Estatísticas descritivas para as variáveis do curso de Licenciatura em Pedagogia}
+  \label{decribingStatisticsPed}
+  \begin{tabular}{@{}lrrrr@{}}
+    \toprule
+    \multicolumn{1}{c}{\textbf{Variável}} & \multicolumn{1}{c}{\textbf{Min}} & \multicolumn{1}{c}{\textbf{Média}} & \multicolumn{1}{c}{\textbf{Mediana}} & \multicolumn{1}{c}{\textbf{Max}} \\ \midrule
+    VAR01 & 0,00 & 2,19 & 0,00 & 49,00 \\
+    VAR02 & 0,00 & 20,45 & 4,00 & 956,00 \\
+    VAR03 & 0,00 & 43,46 & 28,00 & 356,00 \\
+    VAR04 & 0,00 & 12,89 & 14,00 & 36,00 \\
+    VAR05a & 0,00 & 15,91 & 7,00 & 157,00 \\
+    VAR05b & 0,00 & 25,77 & 15,00 & 215,00 \\
+    VAR05c & 0,00 & 36,70 & 19,00 & 314,00 \\
+    VAR06 & 0,00 & 2,89 & 0,00 & 115,00 \\
+    VAR07 & 0,00 & 80,87 & 57,00 & 604,00 \\
+    VAR08 & 0,00 & 9,82 & 2,00 & 241,00 \\
+    VAR09 & 0,00 & 30,39 & 21,00 & 194,00 \\
+    VAR10 & 0,00 & 6,79 & 1,00 & 102,00 \\
+    VAR11 & 0,00 & 6,78 & 0,00 & 539,00 \\
+    VAR12 & 0,00 & 0,29 & 0,00 & 5,00 \\
+    VAR12 & 0,00 & 3,97 & 2,67 & 117,17 \\
+    VAR14 & 0,00 & 4,71 & 4,00 & 28,00 \\
+    VAR15 & 0,00 & 17,74 & 3,00 & 684,00 \\ \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table}[]
+  \centering
+  \caption{Estatísticas descritivas para as variáveis do curso de Bacharelado em Administração Pública}
+  \label{decribingStatisticsAdm}
+  \begin{tabular}{@{}lrrrr@{}}
+    \toprule
+    \textbf{Variável} & \multicolumn{1}{l}{\textbf{Min}} & \multicolumn{1}{l}{\textbf{Média}} & \multicolumn{1}{l}{\textbf{Mediana}} & \multicolumn{1}{l}{\textbf{Max}} \\ \midrule
+    VAR01 & 0,00 & 1,42 & 0,00 & 59,00 \\
+    VAR02 & 0,00 & 21,66 & 2,00 & 1797,00 \\
+    VAR03 & 0,00 & 61,59 & 43,00 & 1114,00 \\
+    VAR04 & 0,00 & 17,70 & 17,00 & 81,00 \\
+    VAR05a & 0,00 & 20,60 & 7,00 & 402,00 \\
+    VAR05b & 0,00 & 27,46 & 14,00 & 342,00 \\
+    VAR05c & 0,00 & 29,96 & 15,00 & 272,00 \\
+    VAR06 & 0,00 & 1,09 & 0,00 & 96,00 \\
+    VAR07 & 0,00 & 80,40 & 50,00 & 1000,00 \\
+    VAR08 & 0,00 & 13,22 & 1,00 & 346,00 \\
+    VAR09 & 0,00 & 48,89 & 32,00 & 471,00 \\
+    VAR10 & 0,00 & 5,22 & 0,00 & 626,00 \\
+    VAR11 & 0,00 & 5,08 & 0,00 & 1598,00 \\
+    VAR12 & 0,00 & 0,13 & 0,00 & 6,00 \\
+    VAR12 & 0,00 & 2,65 & 1,67 & 55,10 \\
+    VAR14 & 0,00 & 4,66 & 5,00 & 20,00 \\
+    VAR15 & 0,00 & 9,55 & 0,00 & 533,00 \\ \bottomrule
+  \end{tabular}
+\end{table}
 
 \section{Pós-processamento}
 
