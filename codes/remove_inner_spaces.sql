@@ -1,0 +1,10 @@
+DELIMITER //
+DROP FUNCTION IF EXISTS DELETE_INNER_SPACES//
+CREATE FUNCTION DELETE_INNER_SPACES(str VARCHAR(255)) RETURNS VARCHAR(255) DETERMINISTIC
+BEGIN
+ while instr(str, ' ') > 0 do
+ set str = replace(str, ' ', '');
+ end while;
+ return str;
+END//
+DELIMITER ;

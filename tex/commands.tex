@@ -165,6 +165,7 @@
 % Biblioteca para códigos-fonte
 %-------------------------------------------------------------------------------
 \usepackage[newfloat=true]{minted}
+\usemintedstyle{bw} % Coódigos em preto branco
 
 %-------------------------------------------------------------------------------
 % Caixas batutas - by @leolleocomp
@@ -215,7 +216,7 @@
   \refstepcounter{sourcecode}
   \caption{#1}
   \label{cmd:#2}
-  \inputminted[linenos, bgcolor=bg, tabsize=4,breaklines]{#3}{codes/#4}
+  \inputminted[linenos, bgcolor=bg, tabsize=2,breaklines,fontsize=\scriptsize]{#3}{codes/#4}
   \Ididthis
 \end{listing}
 }
@@ -235,13 +236,12 @@
 \newenvironment{code}{\captionsetup{type=listing}}{}
 \SetupFloatingEnvironment{listing}{name=Código}
 
-\newcommand{\sourcecodenolist}[4]{
+\newcommand{\sourcecodenolist}[3]{
   \begin{code}
       \refstepcounter{sourcecode}
         \captionof{listing}{#1 }
-        \label{code:#2}
-        \inputminted[linenos, bgcolor=bg, tabsize=4,breaklines]{#3}{codes/#4}
-        \Wedidthis
+        \inputminted[bgcolor=bg, tabsize=2,breaklines,fontsize=\scriptsize, bgcolor=white]{#2}{codes/#3}
+        \Ididthis
     \end{code}
 }
 
