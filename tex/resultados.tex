@@ -222,6 +222,26 @@ A partir da análise dos gráficos das Figuras \ref{knnKResultsPedA} e
 aplicação do KNN sobre os dados do curso de Licenciatura em Pedagogia e o valor
 \(1\) para o curso de Bacharelado em Administração Pública.
 
+Os algoritmos Árvore de Decisão e Regressão Logística não possuem parâmetros,
+portanto, não tiveram que passar pelo mesmo processo que o KNN.
+
+Cada algoritmo foi treinado com os conjuntos de treinamento e testado com o
+conjunto de testes. Após, foram calculadas as matrizes de confusão, que estão
+ilustradas na Figura \ref{confusionMatrixResult}.
+
+\begin{figure}[!htb]
+  \centering
+  \caption{\label{confusionMatrixResult} Matrizes de confusão.}
+  \subcaptionbox{KNN Administração.}{\includegraphics[scale=.40]{img/cm_knn_adm}}\qquad
+  \subcaptionbox{LR Administração.}{\includegraphics[scale=.40]{img/cm_rl_adm}}\qquad
+  \subcaptionbox{Árvore de Descisão Administração.}{\includegraphics[scale=.40]{img/cm_tree_adm}}
+  \subcaptionbox{KNN Pedagogia.}{\includegraphics[scale=.40]{img/cm_knn_ped}}\qquad
+  \subcaptionbox{LR Pedagogia.}{\includegraphics[scale=.40]{img/cm_rl_ped}}\qquad
+  \subcaptionbox{Árvore de Descisão Pedagogia.}{\includegraphics[scale=.40]{img/cm_tree_ped}}
+  \vspace{1.5em}
+  \Ididthis
+\end{figure}
+
 \section{Pós-processamento}
 
 \section{Conhecimento Obtido}
