@@ -450,10 +450,10 @@ incorretas é \((f_{10} + f_{01})\).
 A matriz de confusão mostra informações importantes para determinar o desempenho
 do modelo, no entanto, resumir essas informações em um único número é mais
 conveniente quando queremos comparar o desempenho entre  diferentes modelos.
-Isso pode ser feito usando uma métrica de desempenho como a precisão, que é
+Isso pode ser feito usando uma métrica de desempenho como a acurácia, que é
 definida da seguinte maneira \cite{tan2009introduccao}:
 \[
-  \text{Precisão} =
+  \text{Acurácia} =
   \frac
     {\text{Número de previsões corretas}}
     {\text{Número total de previsões}} =
@@ -461,6 +461,41 @@ definida da seguinte maneira \cite{tan2009introduccao}:
     {f_{11} + f_{00}}
     {f_{11} + f_{10} + f_{01} + f_{00}}
 \]
+
+A acurácia representa a taxa de acertos do algoritmo, e é, geralmente, a
+primeira a ser analisada para medir performance.
+
+Neste trabalho, além da acurácia, também serão avaliadas as seguintes métricas:
+\[
+  \text{Precisão} =
+  \frac{f_{11}}{f_{11} + f_{01}},
+\]
+que representa a preditividade positiva, que é o percentual de acertos de
+verdadeiros positivos dentre todos os exemplos classificados como positivos,
+\[
+  \text{Sensibilidade} =
+  \frac{f_{11}}{f_{11} + f_{00}},
+\]
+que indica a taxa de verdadeiros positivos, ou seja, o percentual de verdadeiros
+positivos previstos corretamente pelo classificador,
+\[
+  \text{Especificidade} =
+  \frac{f_{10}}{f_{11} + f_{01}},
+\]
+que fornece a taxa de verdadeiros negativos, ou seja, o percentual de instâncias
+previstos corretamente como verdadeiros negativos,
+\[
+  \text{Taxa de Falsos Positivos (TFP)} =
+  \frac{f_{01}}{f_{10} + f_{01}},
+\]
+que indica o percentual de instâncias negativas previstas incorretamente como
+verdadeiros positivos e a
+\[
+  \text{Taxa de Falsos Negativos (TFN)} =
+  \frac{f_{00}}{f_{00} + f_{11}},
+\]
+que indica o percentual de instâncias positivas previstas incorretamente como
+verdadeiros negativos.
 
 \subsubsection{Árvore de decisão}
 
