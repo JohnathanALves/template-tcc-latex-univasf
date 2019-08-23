@@ -199,7 +199,7 @@ desses experimentos.
 \begin{figure}[!htb]
   \centering
   \caption{\label{knnKResultsPed} Gráficos de valores de acurácia para valores de K, com K variando entre \(3\) e \(201\) com incremento de \(2\) para o curso de Licenciatura em Pedagogia.}
-  \subcaptionbox{Dados não normalizados.}{\includegraphics[scale=.45]{img/knn_neigh_ped}}\qquad
+  \subcaptionbox{\label{knnKResultsPedA}Dados não normalizados.}{\includegraphics[scale=.45]{img/knn_neigh_ped}}\qquad
   \subcaptionbox{Dados normalizados.}{\includegraphics[scale=.45]{img/knn_neigh_norm_ped}}
   \vspace{1.5em}
   \Ididthis
@@ -208,11 +208,19 @@ desses experimentos.
 \begin{figure}[!htb]
   \centering
   \caption{\label{knnKResultsAdm} Gráficos de valores de acurácia para valores de K, com K variando entre \(3\) e \(201\) com incremento de \(2\) para o cuso de Bacharelado em Administração Pública.}
-  \subcaptionbox{Dados não normalizados.}{\includegraphics[scale=.45]{img/knn_neigh_adm}}\qquad
+  \subcaptionbox{\label{knnKResultsAdmA}Dados não normalizados.}{\includegraphics[scale=.45]{img/knn_neigh_adm}}\qquad
   \subcaptionbox{Dados normalizados.}{\includegraphics[scale=.45]{img/knn_neigh_norm_adm}}
   \vspace{1.5em}
   \Ididthis
 \end{figure}
+
+A acurácia do algoritmo foi escolhida como alvo nesses experimentos por ser uma
+métrica clássica e utilizada como padrão na biblioteca \textit{Scikt-learn}.
+
+A partir da análise dos gráficos das Figuras \ref{knnKResultsPedA} e
+\ref{knnKResultsAdmA}, foram escolhidos o valor \(3\) para o parâmetro \(k\) na
+aplicação do KNN sobre os dados do curso de Licenciatura em Pedagogia e o valor
+\(1\) para o curso de Bacharelado em Administração Pública.
 
 \section{Pós-processamento}
 
