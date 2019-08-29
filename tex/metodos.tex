@@ -145,23 +145,23 @@ E o curso de Licenciatura em Pedagogia que ocorreu entre os períodos letivos de
 
 \subsection{Pré-processamento}
 
-Devido ao grande volume de dados foram elaborados \textit{scripts} em SQL que
-geram tabelas auxiliares apenas com dados dos das disciplinas contidas e alunos
+Devido ao grande volume de dados foram elaborados \textit{scripts} em SQL, que
+geram tabelas auxiliares apenas com dados dos das disciplinas e alunos
 matrículados nos cursos selecionados para este trabalho. Essas tabelas serão
 apresentadas no capítulo de resultados.
 
 As variáveis utilizadas neste trabalho foram baseadas na pesquisa de
 \citeonline{ramos2016abordagem}, que também extraiu dados de uma instância do
-Moodle. No entanto, ao invés de utilizar todas as variáveis, foram utilizadas
+Moodle. No entanto, em vez de utilizar todas as variáveis, foram utilizadas
 apenas as resultantes da etapa de seleção de variáveis realizada por Ramos em
 sua tese de doutorado. Essas variáveis também serão descritas no capítulo de
 resultados.
 
 Foram elaborados \textit{scripts} SQL que, a partir das tabelas mencionadas nos
 Quadros \ref{moodleTableReferences} e \ref{reducedDataTables}, foram construídas
-tabelas com os dados brutos, onde cada linha gerada representa um aluno em uma
-disciplina e as variáveis mapeadas para os construtos da TDT. As tabelas geradas
-serviram como base para as etapas seguintes do processo KDD.
+tabelas com os dados brutos, nas quais cada linha gerada representa um aluno em
+uma disciplina e as variáveis mapeadas para os construtos da TDT. As tabelas
+geradas serviram como base para as etapas seguintes do processo KDD.
 
 Para que as variáveis que dependiam de períodos de tempo fossem coletadas
 corretamente, foi necessário inserir a data final de disciplinas que não
@@ -174,20 +174,20 @@ Foram necessárias várias iterações de ajustes nos \textit{scripts} e confer�
 dos resultados antes de avançar para a próxima fase, como já havia sido
 previsto, esta foi a etapa que consumiu a maior parcela do tempo de elaboração
 desse trabalho. A conferência dos dados se deu a partir de acessos com perfil de
-professor no Moodle, com acesso a várias disciplinas, onde eram feitas as
+professor no Moodle, com acesso a várias disciplinas, nas quais eram feitas as
 contagem de eventos realcionados às variáveis coletadas.
 
-As tabelas geradas foram convertidas para planilhas eletrônicas para facilitar o
-processo de filtragem e remoção de erros de implementação ou de configurações
+As tabelas geradas foram convertidas para planilhas eletrônicas, para facilitar
+o processo de filtragem e remoção de erros de implementação ou de configurações
 feitas pelos gestores dos cursos. Foram removidos professores cadastrados como
 alunos, disciplinas ofertadas para alunos repetentes e disciplinas ofertadas
 fora do período (já que essas disciplinas poderiam enviesar os algoritmos de
-classificação). Também foram eliminadas colunas que poderiam ser utilizadas para
-identificar os alunos, com o objetivo de anonimizar os dados.
+classificação). Também, foram eliminadas colunas que poderiam ser utilizadas
+para identificar os alunos, com o objetivo de anonimizar os dados.
 
-Disciplinas como Estágio Supervisionado, Trabalho de Conclusão de Curso entre
-outras, também foram eliminadas, pois não seguem a mesma estrutura de
-disciplinas tradicionais, podendo também causar vieses nos algoritmos.
+Disciplinas como Estágio Supervisionado, Trabalho de Conclusão de Curso, entre
+outras, também, foram eliminadas, pois não seguem a mesma estrutura de
+disciplinas tradicionais, podendo causar vieses nos algoritmos.
 
 Todos os \textit{scripts} gerados nessa etapa estão disponíveis no Apêndice
 \ref{anex:anexo1}
@@ -200,7 +200,7 @@ programação Python, na distribuição Anaconda.
 Python\footnote{\url{https://www.python.org/} Acesso em: 06 de mar. 2019} é uma
 linguagem de programação de código aberto classificada como linguagem de alto
 nível de abstração. Considerada de fácil manuseio mesmo por usuários iniciantes.
-É mantida e desenvolvida pela Python Software Foundation
+É mantida e desenvolvida pela Python \textit{Software Foundation}.
 
 Graças a sua enorme comunidade, existem diversos pacotes e bibliotecas
 desenvolvidas em Python para as mais variadas tarefas, desde servidores HTTP,
@@ -272,7 +272,7 @@ conjunto de teste avaliamos o classificador segundo as seguintes métricas:
 acurácia, precisão, sensibilidade, especificidade.
 
 3 - Importância de variáveis: de posse do modelo treinado, avaliamos quais
-variáveis tiveram mais influência na performance do modelo através da classe
+variáveis tiveram mais influência na performance do modelo por meio da classe
 \textit{SelectFromModel} da biblioteca \textit{feature\_selection} no
 scikit-learn.
 
