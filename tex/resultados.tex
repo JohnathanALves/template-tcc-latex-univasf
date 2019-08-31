@@ -297,6 +297,40 @@ para o algoritmo.
   \Ididthis
 \end{figure}
 
+Notou-se que a variável \textit{VAR07} (Quantidade de acessos do aluno ao
+ambiente no semestre) apareceu como a mais relevante. Porém, como todas as
+outras variáveis só são contabilizadas depois que o aluno acessa o ambiente,
+essa variável se torna bastante enviesada. Devido a isso, a etapa de mineração
+foi executada novamente com a exclusão da mesma.
+
+Para o algoritmo KNN, o valor de \(k\) foi ajustado para os dados sem a variável
+\textit{VAR07}. As Figuras \ref{knnKResultsPedNoVar7} e
+\ref{knnResultsAdmNoVar7} ilustram os gráficos utilizados para a escolha do
+parâmetro \(k\).
+
+\begin{figure}[!htb]
+  \centering
+  \caption{\label{knnKResultsPedNoVar7} Gráficos de valores de acurácia para valores de K, com K variando entre \(3\) e \(201\) com incremento de \(2\) para o curso de Licenciatura em Pedagogia após a exclusão da variável \textit{VAR07}.}
+  \subcaptionbox{\label{knnKResultsPedANoVar7A}Dados não normalizados.}{\includegraphics[scale=.45]{img/knn_neigh_ped_no_var07}}\qquad
+  \subcaptionbox{Dados normalizados.}{\includegraphics[scale=.45]{img/knn_neigh_norm_ped_no_var07}}
+  \vspace{1.5em}
+  \Ididthis
+\end{figure}
+
+\begin{figure}[!htb]
+  \centering
+  \caption{\label{knnResultsAdmNoVar7} Gráficos de valores de acurácia para valores de K, com K variando entre \(3\) e \(201\) com incremento de \(2\) para o cuso de Bacharelado em Administração Pública após a exclusão da variável \textit{VAR07}.}
+  \subcaptionbox{\label{knnKResultsAdmANoVar7A}Dados não normalizados.}{\includegraphics[scale=.45]{img/knn_neigh_adm_no_var07}}\qquad
+  \subcaptionbox{Dados normalizados.}{\includegraphics[scale=.45]{img/knn_neigh_norm_adm_no_var07}}
+  \vspace{1.5em}
+  \Ididthis
+\end{figure}
+
+Após análise dos gráficos contidos nas Figuras \ref{knnKResultsPedANoVar7A} e
+\ref{knnKResultsAdmANoVar7A}, optou-se para valores de \(k = 1\) e os dados não
+normalizados em ambas as bases.
+
+Em seguida, foram geradas novas matrizes de confusão que estão ilustradas na Figura \ref{newConfusionMatrixResult}.
 
 \section{Pós-processamento}
 
