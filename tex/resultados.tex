@@ -128,6 +128,10 @@ de treinamento é mostrada nas Figuras \ref{classDistribuitionAdmTest} e
   \Ididthis
 \end{figure}
 
+Já que os conjuntos de dados mantiveram proporções semelhantes, os conjuntos de
+teste servirão como conjuntos de validação, as matrizes de confusão e as
+métricas serão calculadas utilizando-os.
+
 As Tabelas \ref{decribingStatisticsPed} e \ref{decribingStatisticsAdm}
 apresentam as estatísticas descritivas das variáveis coletadas no curso de
 Licenciatura em Pedagogia e Bacharelado em Administração Pública,
@@ -192,110 +196,17 @@ de classificação. Destes, o primeiro foi o KNN. Iniciou-se pela escolha do
 parâmetro \(k\), a quantidade de vizinhos. Para tal, foram testados valores
 entre \(3\) e \(201\), mantendo-se sempre uma quantidade impar de vizinhos. Esse
 experimento foi repetido, porém, com os dados normalizados, na tentativa de
-remover a influência da diferença de escalas entre as variáveis. Nas Figuras
-\ref{knnKResultsPed} e \ref{knnKResultsAdm} podemos ver os gráficos resultantes
-desses experimentos.
-
-\begin{figure}[!htb]
-  \centering
-  \caption{\label{knnKResultsPed} Gráficos de valores de acurácia para valores de K, com K variando entre \(3\) e \(201\) com incremento de \(2\) para o curso de Licenciatura em Pedagogia.}
-  \subcaptionbox{\label{knnKResultsPedA}Dados não normalizados.}{\includegraphics[scale=.45]{img/knn_neigh_ped}}\qquad
-  \subcaptionbox{Dados normalizados.}{\includegraphics[scale=.45]{img/knn_neigh_norm_ped}}
-  \vspace{1.5em}
-  \Ididthis
-\end{figure}
-
-\begin{figure}[!htb]
-  \centering
-  \caption{\label{knnKResultsAdm} Gráficos de valores de acurácia para valores de K, com K variando entre \(3\) e \(201\) com incremento de \(2\) para o cuso de Bacharelado em Administração Pública.}
-  \subcaptionbox{\label{knnKResultsAdmA}Dados não normalizados.}{\includegraphics[scale=.45]{img/knn_neigh_adm}}\qquad
-  \subcaptionbox{Dados normalizados.}{\includegraphics[scale=.45]{img/knn_neigh_norm_adm}}
-  \vspace{1.5em}
-  \Ididthis
-\end{figure}
+remover a influência da diferença de escalas entre as variáveis.
 
 A acurácia do algoritmo foi escolhida como métrica nesses experimentos por ser
 uma métrica clássica e utilizada como padrão na biblioteca \textit{Scikt-learn}.
 
-A partir da análise dos gráficos das Figuras \ref{knnKResultsPedA} e
-\ref{knnKResultsAdmA}, foi escolhido o valor \(3\) para o parâmetro \(k\) na
-aplicação do KNN sobre os dados do curso de Licenciatura em Pedagogia e o valor
-\(1\) para o curso de Bacharelado em Administração Pública.
+A partir da análise dos gráficos gerados, foi escolhido o valor \(3\) para o
+parâmetro \(k\) na aplicação do KNN sobre os dados do curso de Licenciatura em
+Pedagogia e o valor \(1\) para o curso de Bacharelado em Administração Pública.
 
 Os algoritmos Árvore de Decisão e Regressão Logística não possuem parâmetros,
 portanto, não tiveram que passar pelo mesmo processo que o KNN.
-
-Cada algoritmo foi treinado com os conjuntos de treinamento e testado com o
-conjunto de testes. Após, foram calculadas as matrizes de confusão, que estão
-ilustradas na Figura \ref{confusionMatrixResult}.
-
-\begin{figure}[!htb]
-  \centering
-  \caption{\label{confusionMatrixResult} Matrizes de confusão.}
-  \subcaptionbox{KNN Administração.}{\includegraphics[scale=.40]{img/cm_knn_adm}}\qquad
-  \subcaptionbox{LR Administração.}{\includegraphics[scale=.40]{img/cm_rl_adm}}\qquad
-  \subcaptionbox{Árvore de Decisçao Administração.}{\includegraphics[scale=.40]{img/cm_tree_adm}}
-  \subcaptionbox{KNN Pedagogia.}{\includegraphics[scale=.40]{img/cm_knn_ped}}\qquad
-  \subcaptionbox{LR Pedagogia.}{\includegraphics[scale=.40]{img/cm_rl_ped}}\qquad
-  \subcaptionbox{Árvore de Decisçao Pedagogia.}{\includegraphics[scale=.40]{img/cm_tree_ped}}
-  \vspace{1.5em}
-  \Ididthis
-\end{figure}
-
-As matrizes de confusão serviram como base para o cálculo das métricas dos
-algoritmos de classificação, as Tabelas \ref{metricsPed} e \ref{metricsAdm}
-apresentam os resultados para cada algoritmo.
-
-\begin{table}[!htb]
-  \centering
-  \caption{Métricas dos algoritmos aplicados no curso de Licenciatura em Pedagogia}
-  \label{metricsPed}
-  \resizebox{\textwidth}{!}{%
-  \begin{tabular}{@{}lrrrrrr@{}}
-    \toprule
-    \multicolumn{1}{c}{\textbf{Algoritmo}} & \multicolumn{1}{c}{\textbf{Acurácia}} & \multicolumn{1}{c}{\textbf{Precisão}} & \multicolumn{1}{c}{\textbf{Sensibilidade}} & \multicolumn{1}{c}{\textbf{Especificidade}} & \multicolumn{1}{c}{\textbf{TFP}} & \multicolumn{1}{c}{\textbf{TFN}} \\ \midrule
-    KNN & 0,9782 & 0,9770 & 0,9798 & 0,9383 & 0,0235 & 0.0202 \\
-    Árvore de Decisão & 0,9879 & 0,9838 & 0,9923 & 0,9833 & 0,0167 & 0,0077 \\
-    Regressão Logística & 0,8917 & 0,8969 & 0,8874 & 0,8962 & 0,1038 & 0,1126 \\ \bottomrule
-  \end{tabular}%
-  }
-  \Ididthis
-\end{table}
-
-\begin{table}[!htb]
-  \centering
-  \caption{Métricas dos algoritmos aplicados no curso de Bacharelado em Administração Pública}
-  \label{metricsAdm}
-    \resizebox{\textwidth}{!}{%
-    \begin{tabular}{@{}lrrrrrr@{}}
-    \toprule
-    \multicolumn{1}{c}{\textbf{Algoritmo}} & \multicolumn{1}{c}{\textbf{Acurácia}} & \multicolumn{1}{c}{\textbf{Precisão}} & \multicolumn{1}{c}{\textbf{Sensibilidade}} & \multicolumn{1}{c}{\textbf{Especificidade}} & \multicolumn{1}{c}{\textbf{TFP}} & \multicolumn{1}{c}{\textbf{TFN}} \\ \midrule
-    KNN & 0,9458 & 0,9513 & 0,9517 & 0,9383 & 0,0617 & 0,0483 \\
-    Árvore de Decisão & 0,9419 & 0,9526 & 0,9429 & 0,9407 & 0,0593 & 0,0571 \\
-    Regressão Logística & 0,8398 & 0,8511 & 0,8645 & 0,8086 & 0,1914 & 0,1355 \\ \bottomrule
-  \end{tabular}%
-  }
-  \Ididthis
-\end{table}
-
-Para o algoritmo de Árvore de Decisão foram geradas as visualizações das árvores
-para os \(3\) primeiros níveis, que estão ilustrados nas Figuras \ref{treePed} e
-\ref{treeAdm}. No nó raiz dessas árvores fica a variável com maior importância
-para o algoritmo.
-
-\begin{figure}[!htb]
-  \centering
-  \caption{\label{treePed} Árvore de Decisão gerada a partir dos dados do curso de Licenciatura em Pedagogia.}
-  \includegraphics[angle=-90,scale=.50]{img/ped_tree}
-  \Ididthis
-\end{figure}
-
-\begin{figure}[!htb]
-  \centering
-  \caption{\label{treeAdm} Árvore de Decisão gerada a partir dos dados do curso de Bacharelado em Administração Pública.}
-  \includegraphics[angle=-90,scale=.50]{img/adm_tree}
-  \Ididthis
-\end{figure}
 
 Notou-se que a variável \textit{VAR07} (Quantidade de acessos do aluno ao
 ambiente no semestre) apareceu como a mais relevante. Porém, como todas as
@@ -331,6 +242,10 @@ Após análise dos gráficos contidos nas Figuras \ref{knnKResultsPedANoVar7A} e
 normalizados em ambas as bases.
 
 Em seguida, foram geradas novas matrizes de confusão que estão ilustradas na Figura \ref{newConfusionMatrixResult}.
+
+As matrizes de confusão serviram como base para o cálculo das métricas dos
+algoritmos de classificação, as Tabelas \ref{metricsPed} e \ref{metricsAdm}
+apresentam os resultados para cada algoritmo.
 
 \begin{figure}[!htb]
   \centering
