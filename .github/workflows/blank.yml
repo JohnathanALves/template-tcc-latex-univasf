@@ -9,4 +9,4 @@ jobs:
     
     steps:
       - name: Github Actions for LaTeX
-      uses: xu-cheng/latex-action@1.0.4
+      - uses: xu-cheng/latex-action@1.0.4
